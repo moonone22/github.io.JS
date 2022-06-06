@@ -1,0 +1,179 @@
+
+
+        li{
+            list-style: none;
+            
+        }
+        .container{
+            position: relative;
+            width: 500px;
+            padding-bottom: 50px;
+            overflow:hidden; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: content-box;
+        }
+        .slide_contiainer{
+            position: absolute;
+            width: 100%;
+            transition: left 1s ease-in;
+        }
+        .slide{
+        box-sizing:border-box;
+        position: absolute;
+        width: 100%;
+        padding: 0 10%;
+        top: 50%;
+        transform:translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        }
+        .pager{
+            
+            position: absolute;
+            left: 0;
+            right:0;
+            bottom: 0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .pager span{
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            text-indent: -9999em;
+            margin: 0 5px;
+        }
+        .pager span.active{
+        background: red;
+    }
+    
+        
+.clock{
+    width: 300px;
+    height: 300px;
+    /*투명하게 하기 위해 RGBA를 사용*/
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+    background: linear-gradient(45deg, #0092b2, transparent);
+    box-shadow: 0 5px 29px rgb(0 0 0);
+}
+
+.clock .number{
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+    color:white;
+}
+
+.clock .number1{ --rotation: 30deg;}
+.clock .number2{ --rotation: 60deg;}
+.clock .number3{ --rotation: 90deg;}
+.clock .number4{ --rotation: 120deg;}
+.clock .number5{ --rotation: 150deg;}
+.clock .number6{ --rotation: 180deg;}
+.clock .number7{ --rotation: 210deg;}
+.clock .number8{ --rotation: 240deg;}
+.clock .number9{ --rotation: 270deg;}
+.clock .number10{ --rotation: 300deg;}
+.clock .number11{ --rotation: 330deg;}
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 50%;
+    background-color: black;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    /*변형-원점 속성 => 분 초침의 중심이 정중앙에 오도록 해줌 중 원점을 바닥에 둠*/
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .hand.second{
+    width: 3px;
+    height: 45%;
+    background-color: #2e94e3;
+    
+}
+.clock .hand.minute{
+    width: 7px;
+    height: 40%;
+    background-color: #136cc1;
+    
+
+}
+.clock .hand.hour{
+    width: 10px;
+    height: 35%;
+    background-color: #136cc1;
+    
+
+}
+
+/*디지털시계 */
+
+.DclockBox{
+    width: 500px;
+    background: #01071996;
+    color: white;
+    border: 3px solid #2E84E3;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    transition: 1s;
+    font-size: 40px;
+    box-shadow: 0 5px 37px #07f;
+}
+
+.DclockBox:hover{
+    background-color: #2e94e3;
+    box-shadow: 0 0 30px #2E94e3;
+    color: black;
+    
+}
+
+.DclockBox h2{
+    background: #1582d6;
+    font-size: 19px;
+    margin-top: 3px;
+    padding: 0 5px;
+    border-radius: 3px;
+    width: 41px;
+    margin-left: 14px;
+    transition: 1.5s;
+}
+
+.DclockBox:hover h2{
+    background:red; 
+}
