@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:ital,wght@0,500;1,600&display=swap');
+
+
+
+
+.product-card{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    max-width: 355px;
+    width: 100%;
+    border-radius:25px ;
+    padding: 20px 30px 30px 30px;
+    box-shadow: 0 5px 80px rgb(0, 0, 0);
+    background: #fff;
+    z-index: 3;
+    overflow: hidden;
+    text-align: center;
+    perspective: 80rem;
+    user-select: none;
+    transform: rotateY(0deg);
+    transition: 1s ease;
+
+}
+
+.product-card .logo-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-card .logo-cart img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+.product-card .logo-cart i{
+    font-size: 27px;
+    color: #707070;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.product-card .logo-cart i:hover{
+    color:#333;
+}
+.product-card .main-images{
+    position:relative;
+    height: 210px;
+    left: 16px;
+}
+.product-card .main-images img{
+    position:absolute;
+    height: 270px;
+    width: 270px;
+    object-fit: contain;
+    transform: rotate(18deg);
+    left: 12px;
+    top:-40px;
+    z-index: -1;
+    opacity: 0;
+    transition:  opacity 0.5s ease;
+
+}
+.product-card .main-images img.active{
+    opacity: 1;
+}
+.product-card .shoe-details .shoe_name{
+    font-size: 24px;
+    font-weight: 500;
+    color: #161616;
+
+}
+.product-card .shoe-details p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    text-align: justify;
+}
+.product-card .shoe-details .stars i{
+    margin:0 -1px;
+    color: #333;
+}
+
+.product-card .color-price .color_option{
+    display: flex;
+    align-items: center;
+
+}
+
+.color-price .color_option .color{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 8px;
+}
+
+.color-price{
+    display: flex;
+    justify-content: space-between;
+    }
+
+.color_option .circles{
+    display: flex;
+}
+
+.color_option .circles .circle{
+    height: 18px;
+    width: 18px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+.color_option .circles .circle.red.active{
+    box-shadow: 0 0 0 2px #fff,
+                 0 0 0 4px #0071c7;
+}
+.color_option .circles .circle.blue{
+    background: blue;
+}
+
+.color_option .circles .circle.blue.active{
+    box-shadow: 0 0 0 2px #fff,
+                 0 0 0 4px blue;
+}
+
+.color_option .circles .circle.white{
+    background: gray;
+}
+.color_option .circles .circle.white.active{
+    box-shadow: 0 0 0 2px #fff,
+                 0 0 0 4px gray;
+}
+
+
+.price{
+    display: flex;
+    flex-direction: column;
+}
+
+.color-price .price .price_num{
+    font-size: 25px;
+    font-weight: 600;
+    color: #707070;
+}
+.color-price .price .price_letter{
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: -4px;
+    color: #707070;
+}
+
+.BIGBOXX{
+    max-width: 355px;
+    width: 100%;
+    position: relative;
+    perspective: 80rem;
+    user-select: none;
+
+    transition: 1s ease;
+    transform: scale(1);
+    backface-visibility:  hidden;
+    top: -264px;
+}
+.boxx{
+    position: absolute;
+    max-width: 355px;
+    width: 100%;
+    border-radius:25px ;
+    padding: 20px 30px 30px 30px;
+    box-shadow: 0 2px 36px rgb(255, 255, 255);
+    background: #fff;
+    z-index: 3;
+    overflow: hidden;
+    text-align: center;
+    perspective: 80rem;
+    user-select: none;
+    height: 501px;
+    transition: 1s ease;
+    transform: rotateY(180deg);
+    backface-visibility:  hidden;
+    background-image: url(../img/backJordan.PNG);
+
+}
+
+.card--flipped .product-card{
+    transform: rotateY(-180deg) !important;
+
+}
+
+.card--flipped .boxx{
+    transform: rotateY(0deg) !important;
+}
+
+.cardbutton{
+    position: absolute;
+    
+}
+.cardbutton{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    top: 565px;
+    left: 96px;
+
+}
+.cardbutton:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color:var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.cardbutton::before{
+    content:'';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+.cardbutton span{
+    position:relative;
+    z-index: 1;
+}
+.cardbutton i{
+    position: absolute;
+    inset:0;
+    display: block;
+}
+.cardbutton i::before{
+    content:'';
+    position:absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transition: 0.5s;
+    transform: translateX(-50%);
+
+}
+
+.cardbutton:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+.cardbutton i::after{
+    content:'';
+    position:absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transition: 0.5s;
+    transform: translateX(-50%);
+
+}
+.cardbutton:hover i::after{
+    width: 20px;
+    left: 80%;
+    
+}
