@@ -8,7 +8,7 @@ function onGeoOk(position){
     const lat = position.coords.latitude;
     const log = position.coords.longitude;
     console.log("you live in", lat, log);
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&appid=${API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&appid=${API_KEY}&units=metric`;
     //units=metric를 추가해서 화씨온도표시를 섭씨로 바꿔준다.
     console.log(url);
     fetch(url).then(response => response.json()).then(data =>{
